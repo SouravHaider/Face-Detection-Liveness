@@ -94,15 +94,20 @@ python app.py
 
 ## Results
 
+Evaluated on the held-out test split (real vs. fake face), as reported in the
+project dissertation:
+
 | Metric | Value |
 |---|---|
-| Mean IoU (test) | _run `python -m src.evaluate`_ |
-| Precision @ IoU 0.5 | _…_ |
-| Recall @ IoU 0.5 | _…_ |
-| ACER (liveness) | _…_ |
+| mAP @ IoU 0.5 | **0.985** |
+| F1 score (all classes, conf 0.717) | **0.97** |
+| Precision — real faces | **0.995** |
+| Precision — fake faces | **0.976** |
+| Precision / recall — genuine faces | **≈ 96.8%** |
 
-> Fill these in after training — quantitative results are what set a portfolio
-> project apart from a tutorial.
+Data split: 70% train / 20% validation / 10% test. The model balances precision
+and recall best around a confidence threshold of **0.717**, where the F1 score
+plateaus.
 
 ---
 
@@ -111,7 +116,7 @@ python app.py
 - [x] Cross-platform, modular codebase
 - [x] Blink-based active liveness
 - [x] Detection + anti-spoofing metrics
-- [x] Deployable Streamlit/WebRTC app
+- [x] Deployable Gradio web app (Hugging Face Spaces)
 - [ ] Passive CNN anti-spoof model (MiniFASNet / Silent-Face) via `LivenessChecker.passive_score`
 - [ ] Train on a public face dataset (WIDER FACE) + spoof set (CelebA-Spoof / CASIA-FASD)
 - [ ] ONNX export + quantization for real-time edge inference
