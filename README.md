@@ -19,8 +19,9 @@ Eye-Aspect-Ratio (EAR) challenge-response layer verifies the face belongs to a
 Originally built as a Final Year Project (COMP 1682) and since extended into a
 deployable, evaluated, portfolio-grade system.
 
-> **Try it live:** _add your Hugging Face Space URL here after deploying_
-> **Demo GIF:** _record a short screen capture of `streamlit run app.py` and drop it here_
+> **Try it live:** https://huggingface.co/spaces/SouravHaider/face-detection-liveness
+>
+> ![Demo](demo.gif)
 
 ---
 
